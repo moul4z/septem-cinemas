@@ -4,7 +4,7 @@ Aplicação para gerenciar sessões de cinema, reservar assentos e validar ingre
 
 **Destaques:** 309 testes automatizados (236 API + 73 web, ver [relatório de hardening](docs/HARDENING-REPORT.md)) · CI com PostgreSQL real · prova de concorrência por mutação.
 
-[![CI](https://github.com/daniel-moulaz/septem-cinemas/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/daniel-moulaz/septem-cinemas/actions/workflows/ci.yml)
+[![CI](https://github.com/moul4z/septem-cinemas/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/moul4z/septem-cinemas/actions/workflows/ci.yml)
 
 ## Demo
 
