@@ -55,4 +55,4 @@ Na base compartilhada, novas datas devem ser criadas pelo organizador, duplicand
 - O catálogo e a programação dependem dos dados cadastrados.
 - As capturas documentam fluxos; não substituem testes da versão atualmente publicada.
 
-[Limitações conhecidas](KNOWN-LIMITATIONS.md) · [Como executar os testes](../README.md#testes) · [CI](https://github.com/daniel-moulaz/septem-cinemas/actions/workflows/ci.yml)
+[Limitações conhecidas](KNOWN-LIMITATIONS.md) · [Como executar os testes](../README.md#testes) · [CI](https://github.com/moul4z/septem-cinemas/actions/workflows/ci.yml)
