@@ -57,7 +57,7 @@ O catálogo do organizador pode retornar TMDB_NOT_CONFIGURED, TMDB_TIMEOUT ou TM
 
 ## Deploy e rollback
 
-1. Rode check e mutation proof antes do push. O repositório é `daniel-moulaz/septem-cinemas`; o domínio real gerado para a API permanece o listado no README.
+1. Rode check e mutation proof antes do push. O repositório é `moul4z/septem-cinemas`; o domínio real gerado para a API permanece o listado no README.
 2. Railway usa a raiz do monorepo, Railpack, build/start de `@septem/api`, migrations em pre-deploy e `/health`. Configure segredos distintos, DATABASE_URL, WEB_ORIGIN e API_HOST conforme o ambiente. PORT é fornecida pela plataforma. No plano Free, o Railway recusa o deploy de serviço sem App Sleeping (serverless) antes do pre-deploy e mantém o deployment anterior no ar: confira o commit do deployment ativo, não apenas `/health`. Mudanças feitas no painel ficam staged até serem aplicadas pelo Deploy do banner; Redeploy de um deployment antigo reutiliza a configuração dele. Com o PostgreSQL também dormindo, o pre-deploy pode falhar com `P1001` antes de o banco acordar: nada é migrado e o deployment anterior continua no ar. Acorde o banco com uma leitura (`/sessions`) e publique de novo.
 3. Ative TRUST_PROXY somente atrás do proxy controlado da hospedagem, garantindo que ele sobrescreva headers encaminhados. Sem isso, IP de origem e HSTS podem ser interpretados incorretamente.
 4. Vercel usa `apps/web`; `vercel.json` fixa install/build do monorepo, que prevalecem sobre o dashboard, e aplica rewrite SPA e headers. Se mudar a origem da API, ajuste a CSP e VITE_API_URL juntos. `camera=(self)` permite o scanner; imagens TMDb são explicitamente autorizadas.

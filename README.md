@@ -1,5 +1,11 @@
 # SEPTEM Cinemas
 
+> **In English:** SEPTEM Cinemas is a full-stack cinema ticketing app: showtimes, seat booking with a 10-minute hold, simulated checkout, QR code tickets and gate check-in.
+> Built with React, TypeScript, Fastify, Prisma and PostgreSQL.
+> Seat booking runs in a PostgreSQL transaction with row locks (`SELECT ... FOR UPDATE`) and a partial unique index, so a seat cannot have two active reservations.
+> 300+ automated tests run in GitHub Actions against a real PostgreSQL service, along with a mutation-based proof of the concurrency protections.
+> [Live demo](https://septem-cinemas.vercel.app) (the API may take a few seconds to wake up). The rest of this README is in Portuguese.
+
 Aplicação para gerenciar sessões de cinema, reservar assentos e validar ingressos, com pagamento simulado. Projeto de portfólio de **Daniel Moulaz**: nasceu como desafio técnico (ELITE DEV da Verzel) e evoluiu como projeto próprio.
 
 **Destaques:** 309 testes automatizados (236 API + 73 web, ver [relatório de hardening](docs/HARDENING-REPORT.md)) · CI com PostgreSQL real · prova de concorrência por mutação.
@@ -107,3 +113,5 @@ O pagamento é simulado. SSE e limitação de login têm estado por processo. In
 ## TMDb
 
 Este produto usa a API da TMDb, mas não é endossado nem certificado pela TMDb. Pôsteres, backdrops e metadados pertencem a seus detentores de direitos.
+
+Portfólio: [moulaz.dev](https://moulaz.dev) · [English](https://moulaz.dev/en/)
